@@ -14,7 +14,7 @@ class FramesTableSeeder extends Seeder
      */
     public function run()
     {
-        Frame::insert(['id' => 1, 'time_id' => 1, 'priority' => 1, 'state' => 'selectable']);
+        Frame::insert(['id' => 1, 'date_id' => 1, 'time_id' => 1, 'priority' => 1, 'state' => 'selectable']);
         Frame::insert(['id' => 2, 'date_id' => 1, 'time_id' => 2, 'priority' => 2, 'state' => 'selectable']);
         Frame::insert(['id' => 3, 'date_id' => 1, 'time_id' => 3, 'priority' => 3, 'state' => 'selectable']);
         Frame::insert(['id' => 4, 'date_id' => 1, 'time_id' => 4, 'priority' => 999, 'state' => 'close']);
