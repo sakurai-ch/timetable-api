@@ -25,9 +25,6 @@ class HomeController extends Controller
                 $frames_row[] =
                     array(
                         "id" => $frame->id,
-                        // "time" => $timeValue->time,
-                        // "date" => $dateValue->date,
-                        // "day" => $dateValue->day,
                         "state" => $frame->state
                     );
             }
