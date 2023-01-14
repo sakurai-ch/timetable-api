@@ -15,8 +15,8 @@ class CreateFramesTable extends Migration
     {
         Schema::create('frames', function (Blueprint $table) {
             $table->id();
-            $table->integer('date_id');
-            $table->integer('time_id');
+            $table->bigInteger('date_id');
+            $table->bigInteger('time_id');
             $table->integer('priority');
             $table->string('state');
             $table->timestamps();

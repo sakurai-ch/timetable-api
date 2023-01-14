@@ -15,14 +15,14 @@ class CreateCalculationsTable extends Migration
     {
         Schema::create('calculations', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->bigInteger('user_id');
             $table->string('user_name');
-            $table->string('frame_quantity');
-            $table->string('frame_id');
-            $table->string('date_id');
-            $table->string('time_id');
-            $table->string('user_quantity');
-            $table->string('priority');
+            $table->integer('frame_quantity');
+            $table->bigInteger('frame_id');
+            $table->bigInteger('date_id');
+            $table->bigInteger('time_id');
+            $table->integer('user_quantity');
+            $table->integer('priority');
             $table->string('state');
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class ResultController extends Controller
 {
     public function get(Request $request)
     {
-        $calculation = DB::select('
+        $calculation = DB::select("
             SELECT
                 T.user_id,
                 U.name AS user_name,
@@ -25,7 +25,7 @@ class ResultController extends Controller
                 F.time_id,
                 UQ.user_quantity,
                 F.priority,
-                "" AS state
+                '' AS state
             FROM time_requests AS T
 
                 JOIN users AS U
@@ -47,7 +47,7 @@ class ResultController extends Controller
 
                 JOIN frames AS F
                 ON T.frame_id = F.id
-        ');
+        ");
 
         Calculation::truncate();
 
@@ -108,23 +108,23 @@ class ResultController extends Controller
 
         // -----------------------------------------------
 
-        $users_state = DB::select('
+        $users_state = DB::select("
             SELECT
                 U.id,
                 U.name,
                 CASE C.state
-                    WHEN "fixed" THEN "fixed"
-                    ELSE "warning"
+                    WHEN 'fixed' THEN 'fixed'
+                    ELSE 'warning'
                 END AS state
             FROM users AS U
                 LEFT JOIN (
                     SELECT user_id, state
                     FROM calculations
-                    WHERE state = "fixed"
+                    WHERE state = 'fixed'
                 ) AS C
                 ON U.id = C.user_id
             ORDER BY U.id ASC;
-        ');
+        ");
         $userList = [];
         foreach($users_state as $item){
             $userList[] = 
