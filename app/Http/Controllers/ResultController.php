@@ -73,7 +73,7 @@ class ResultController extends Controller
             $fixedUser = Calculation::
                 where('state','')->
                 orderBy('frame_quantity', 'ASC')->
-                orderBy('user_quantity', 'ASC')->
+                // orderBy('user_quantity', 'ASC')->
                 orderBy('user_id', 'ASC')->
                 orderBy('priority', 'ASC')->
                 first();
