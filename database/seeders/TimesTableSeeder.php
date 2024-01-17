@@ -21,8 +21,8 @@ class TimesTableSeeder extends Seeder
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
-        $time++;
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
+        $time++;
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
         Time::insert(['id' => $id++, 'time' => $time++, 'order' => $order++]);
